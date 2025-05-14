@@ -64,7 +64,7 @@ export const TableBody = <T,>({
           {column.render ? (
             column.render(record[column.key], record, index)
           ) : (
-            <>{record[column.key] ?? ''}</>
+            <>{String(record[column.key] ?? '')}</>
           )}
         </td>
       ))}
